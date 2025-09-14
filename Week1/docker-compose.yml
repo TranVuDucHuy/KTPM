@@ -1,0 +1,9 @@
+services:
+  desktop:
+    build: .
+    container_name: my-linux-desktop
+    ports:
+      - "5901:5901"   # VNC
+      - "2222:22"     # SSH
+    shm_size: "2gb"
+    restart: unless-stopped
